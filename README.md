@@ -1,12 +1,13 @@
 # Dotfiles
 
-This is a dotfiles repository.
+This is my dotfiles repository.
 
 ## Installation
 
 ```sh
-% git clone git@github.com:proshunsuke/dotfiles2.git
-% cd dotfiles && make
+% git clone git@github.com:proshunsuke/dotfiles2.git 
+% cd dotfiles2
+% make
 ```
 
 ## Platform
