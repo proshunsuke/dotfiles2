@@ -2,9 +2,9 @@
 
 . ${DOTFILES_PATH}/scripts/lib.sh
 
-if ! has "sudo" ; then
+if ! has "python" ; then
     case "$(os)" in
         debian)
-            apt-get install -y -qq sudo ;;
+            sudo apt-get install -y -qq python ;;
     esac
 fi

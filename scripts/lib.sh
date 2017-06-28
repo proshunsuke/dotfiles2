@@ -9,6 +9,16 @@ has() {
     is_exists "$@"
 }
 
+contains() {
+    string="$1"
+    substring="$2"
+    if [ "${string#*$substring}" != "$string" ]; then
+        return 0
+    else
+        return 1
+    fi
+}
+
 os_detect() {
     export PLATFORM
     case $(uname) in
