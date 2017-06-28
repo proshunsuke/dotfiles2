@@ -5,7 +5,7 @@ This is a dotfiles repository.
 ## Installation
 
 ```sh
-% git clone git@github.com:proshunsuke/dotfiles.git
+% git clone git@github.com:proshunsuke/dotfiles2.git
 % cd dotfiles && make
 ```
 
@@ -23,5 +23,5 @@ Let's try in docker container.
 ```sh
 % make up-debian
 % make install-in-debian
-% make ssh-debian
+% make ssh-debian-zsh
 ```

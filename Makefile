@@ -35,4 +35,4 @@ ssh-debian-zsh:
 	docker exec -it ${CONTAINER_NAME_DEBIAN} zsh
 
 install-in-debian:
-	docker exec -it ${CONTAINER_NAME_DEBIAN} bash -c "git clone git@github.com:proshunsuke/dotfiles.git && cd dotfiles && make"
+	docker exec -it ${CONTAINER_NAME_DEBIAN} bash -c "git clone git@github.com:proshunsuke/dotfiles2.git && cd dotfiles2 && make"
