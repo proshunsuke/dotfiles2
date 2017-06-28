@@ -6,4 +6,3 @@ done
 
 # シェルの変更
 zsh
-source ${HOME}/.zshrc
