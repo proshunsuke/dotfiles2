@@ -4,7 +4,8 @@
 if ! has "cask" ; then
     case "$(os)" in
         debian)
-            curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python ;;
+            curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
+            . ${HOME}/.zshrc ;;
     esac
 fi
 
