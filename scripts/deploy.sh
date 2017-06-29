@@ -5,4 +5,4 @@ for file in $(ls -A ${DOTFILES_PATH}/dots/) ; do
 done
 
 # シェルの変更
-. ${HOME}/.zshrc
+#source $HOME/.zshrc
