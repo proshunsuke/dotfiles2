@@ -24,4 +24,5 @@ Let's try in docker container.
 ```sh
 % make up-debian
 % make install-in-debian
+% make ssh-debian-zsh
 ```
