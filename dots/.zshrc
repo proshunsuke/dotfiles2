@@ -147,8 +147,8 @@ autoload predict-on
 # lsに色を付ける
 export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
 
-alias ls="ls -AGF --color=auto"
-alias ll="ls -AlGF --color=auto"
+alias ls="ls -GF --color=auto"
+alias ll="ls -lGF --color=auto"
 
 # tmuxの自動起動
 if [ -z "$TMUX" -a -z "$STY" ]; then
@@ -188,6 +188,7 @@ function peco-select-history() {
 zle -N peco-select-history
 bindkey '^r' peco-select-history
 
+# OS特有の処理
 case "${OSTYPE}" in
     darwin*)
         ;;
