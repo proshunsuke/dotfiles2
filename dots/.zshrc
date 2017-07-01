@@ -17,7 +17,7 @@ precmd () { vcs_info }
 
 # プロンプトの設定
 NEWLINE=$'\n'
-LEFT_PROMPT="%{${fg_bold[green]}%}%n${reset_color}:${fg_bold[black]}[${fg_bold[magenta]}%~${reset_color}${fg_bold[black]}][${fg_bold[cyan]}%T${fg_bold[black]}${reset_color}${fg_bold[black]}]${fg[white]}${reset_color}"
+LEFT_PROMPT="%{${fg_bold[green]}%}%n${reset_color}:${fg_bold[black]}[${fg_bold[magenta]}%~${reset_color}${fg_bold[black]}][${fg_bold[cyan]}%*${fg_bold[black]}${reset_color}${fg_bold[black]}]${fg[white]}${reset_color}"
 PROMPT=$LEFT_PROMPT'${vcs_info_msg_0_}'
 PROMPT=$PROMPT${NEWLINE}"%# "
 

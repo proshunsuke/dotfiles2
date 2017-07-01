@@ -1,11 +1,13 @@
  #!/bin/sh
 
-sh ${DOTFILES_PATH}/scripts/sudo/sudo.sh
-sh ${DOTFILES_PATH}/scripts/emacs/emacs.sh
-sh ${DOTFILES_PATH}/scripts/python/python.sh
-sh ${DOTFILES_PATH}/scripts/tmux/tmux.sh
-sh ${DOTFILES_PATH}/scripts/xsel/xsel.sh
-sh ${DOTFILES_PATH}/scripts/zsh/zsh.sh
+. ${DOTFILES_PATH}/scripts/install.sh
+
+install "sudo"
+install "emacs"
+install "python"
+install "tmux"
+install "xsel"
+install "zsh"
 sh ${DOTFILES_PATH}/scripts/deploy.sh
-sh ${DOTFILES_PATH}/scripts/cask/cask.sh
-sh ${DOTFILES_PATH}/scripts/peco/peco.sh
+install "cask"
+install "peco"

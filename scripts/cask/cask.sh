@@ -6,7 +6,6 @@ if ! [ -e ${HOME}/.cask ] ; then
         debian)
             curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python ;;
     esac
+    cd $HOME/.emacs.d/
+    ${HOME}/.cask/bin/cask install
 fi
-
-cd $HOME/.emacs.d/
-${HOME}/.cask/bin/cask install
