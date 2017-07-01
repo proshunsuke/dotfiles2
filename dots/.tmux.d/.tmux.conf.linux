@@ -1,0 +1,28 @@
+# prefixをC-tに変更
+set -g prefix C-t
+
+# C-bのキーバインドを解除
+unbind C-b
+
+# キーストロークのディレイを減らす
+set -sg escape-time 1
+
+# マウス操作を有効にする
+set-option -g mouse on
+
+## クリップボード共有を有効にする
+
+unbind-key -T copy-mode M-w
+unbind-key -T copy-mode C-w
+
+bind-key -T copy-mode M-w send-keys -X copy-pipe "xsel -bi"
+bind-key -T copy-mode C-w send-keys -X copy-pipe "xsel -bi"
+
+# Shift + 上下左右でペインを移動できるようにする。
+bind -n S-left select-pane -L
+bind -n S-down select-pane -D
+bind -n S-up select-pane -U
+bind -n S-right select-pane -R
+
+# ペインの移動(ローテート)
+bind -n C-o select-pane -t :.+
