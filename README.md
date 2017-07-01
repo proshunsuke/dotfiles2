@@ -2,6 +2,8 @@
 
 This is my dotfiles repository.
 
+![image](./public/imgs/image.png)
+
 ## Installation
 
 ```sh
