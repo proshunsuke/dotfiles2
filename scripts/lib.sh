@@ -46,11 +46,22 @@ is_debian() {
     fi
 }
 
+is_arch() {
+    if has "pacman" ; then
+        return 0
+    else
+        return 1
+    fi
+}
+
 os() {
     os_detect
     if is_linux ; then
         if is_debian ; then
             echo "debian"
+        fi
+        if is_arch ; then
+            echo "arch"
         fi
     fi
 }

@@ -1,8 +1,8 @@
 .idea
-.emacs.d/.cask
-.emacs.d/auto-save-list
-.emacs.d/lisp
-.emacs.d/project-explorer-cache
-.emacs.d/snippets
-.emacs.d/var
-.emacs.d/ac-comphist.dat
+dots/.emacs.d/.cask
+dots/.emacs.d/auto-save-list
+dots/.emacs.d/lisp
+dots/.emacs.d/project-explorer-cache
+dots/.emacs.d/snippets
+dots/.emacs.d/var
+dots/.emacs.d/ac-comphist.dat
