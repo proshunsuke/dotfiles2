@@ -15,13 +15,14 @@ This is my dotfiles repository.
 ## Platform
 
 * Linux
-  * based on Debian
+  * Debian
+  * Arch
 
 ## Try
 
 Let's try in docker container.
 
-### based on Debian
+### Debian
 
 ```sh
 % make up-debian
