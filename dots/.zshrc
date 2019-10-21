@@ -138,17 +138,12 @@ compinit -u
 
 # zshエディタ
 autoload zed
-export SUDO_EDITOR="$(which emacs)"
-export EDITOR="$(which emacs)"
+alias sudo='sudo '
+export SUDO_EDITOR="/usr/bin/emacs"
+export EDITOR="/usr/bin/emacs"
 
 # コマンド補完
 autoload predict-on
-
-# lsに色を付ける
-export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-
-alias ls="ls -GF --color=auto"
-alias ll="ls -lGF --color=auto"
 
 # tmuxの自動起動
 if [ -z "$TMUX" -a -z "$STY" ]; then
@@ -188,14 +183,41 @@ function peco-select-history() {
 zle -N peco-select-history
 bindkey '^r' peco-select-history
 
+export PATH=/Users/sh-suzuki/.go/bin:$PATH
+export GOPATH=$HOME/.go
+
+if [[ -x `which colordiff` ]]; then
+  alias diff='colordiff -u'
+else
+  alias diff='diff'
+fi
+
 # OS特有の処理
 case "${OSTYPE}" in
     darwin*)
+        eval "$(rbenv init -)"
+        export PATH=/usr/local/opt/openssl/bin:$PATH
+        alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
+        # lsに色を付ける
+        export LSCOLORS=gxfxcxdxbxegexabagacad
+        alias ls="ls -GF"
+        source ~/.phpbrew/bashrc
+        setopt nonomatch
+        alias tmuxinator="$HOME/.rbenv/versions/2.4.2/bin/tmuxinator"
+        alias git="/usr/local/bin/git"
+        PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+        export NVM_DIR="$HOME/.nvm"
+        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+        [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
         ;;
     linux*)
         # 入力メソッド
         export GTK_IM_MODULE=fcitx
         export XMODIFIERS=@im=fcitx
         export QT_IM_MODULE=fcitx
+        # lsに色を付ける
+        export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+        alias ls="ls -GF"
+        alias ll="ls -lGF"
         ;;
 esac

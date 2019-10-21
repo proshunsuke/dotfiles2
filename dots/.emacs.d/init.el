@@ -202,7 +202,7 @@ tabbar-scroll-right-button))
 
 ;; dired+
 (require 'dired+)
-
+cask upgrade-cask
 ;; git-gutter+
 (require 'git-gutter+)
 ;; git-gutter-fringe+
