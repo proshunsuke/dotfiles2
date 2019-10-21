@@ -6,5 +6,7 @@ if ! has "python" ; then
     case "$(os)" in
         debian)
             sudo apt-get install -y -qq python ;;
+        arch)
+            sudo pacman -S --noconfirm python ;;
     esac
 fi

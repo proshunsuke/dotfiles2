@@ -25,14 +25,6 @@
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 
-;; elixir
-(require 'elixir-mode)
-(elixir-mode)
-(require 'alchemist)
-(require 'alchemist)
-(require 'ac-alchemist)
-(add-hook 'elixir-mode-hook 'ac-alchemist-setup)
-
 ;; undo redo
 (require 'redo+)
 (define-key global-map (kbd "C-_") 'undo)

@@ -6,6 +6,8 @@ if ! has "zsh" ; then
     case "$(os)" in
         debian)
             sudo apt-get install -y -qq zsh ;;
+        arch)
+            sudo pacman -S --noconfirm zsh ;;
     esac
 fi
 
